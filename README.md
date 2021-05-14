@@ -1,0 +1,2 @@
+# MvcProjeKampi1
+ MVC
