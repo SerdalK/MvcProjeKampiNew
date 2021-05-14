@@ -137,8 +137,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StatisticController.cs" />
     <Compile Include="Controllers\TestController.cs" />
-    <Compile Include="Controllers\TestStatik2Controller.cs" />
-    <Compile Include="Controllers\TestStatikController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2281,8 +2279,6 @@
     <Content Include="Views\AdminCategory\AddCategory.cshtml" />
     <Content Include="Views\AdminCategory\EditCategory.cshtml" />
     <Content Include="Views\Statistic\Index.cshtml" />
-    <Content Include="Views\TestStatik\Index.cshtml" />
-    <Content Include="Views\TestStatik2\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

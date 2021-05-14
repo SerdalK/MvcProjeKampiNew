@@ -9,25 +9,26 @@ namespace MvcProjeKampi.Controllers
 {
     public class StatisticController : Controller
     {
-        // GET: Statistic
-
-        Context _context = new Context();
+        // GET: statistics
+        Context context = new Context();//contexti çağırdık içinde verilerimiz vardı başlık yazar gibi şeyler
         public ActionResult Index()
         {
-            var totalCategory = _context.Categories.Count(); //Toplam Kategori Sayisi
-            ViewBag.totalNumberOfCategories = totalCategory;
 
-            var softwareCategory = _context.Headings.Count(x => x.CategoryID == 8); // Yazilim Kategorisi (8) baslik sayisi
-            ViewBag.softwareCategoryTitleNumber = softwareCategory;
+            var kategorigetir = context.Categories.Count().ToString();
+            ViewBag.kategorigetir = kategorigetir;
 
-            var writerNameSortByA = _context.Writers.Count(x => x.WriterName.Contains("a")); // Yazar adinda "a" harfi gecen yazar sayisi
-            ViewBag.writerNameSortByA = writerNameSortByA;
+            var yazilim = context.Headings.Count(x => x.Category.CategoryID == 8);
+            ViewBag.yazilim = yazilim;
 
-            var mostTitles = _context.Headings.Max(x => x.Category.CategoryName); // En fazla basliga sahip kategori adi
-            ViewBag.categoryNameWithTheMostTitles = mostTitles;
+            var yazar = context.Writers.Count(x => x.WriterName.Contains("a"));
+            ViewBag.yazar = yazar;
 
-            var categoryStatusTrue = _context.Categories.Count(x => x.CategoryStatus == true); // Kategoriler tablosundaki aktif kategori sayisi
-            ViewBag.activeCategories = categoryStatusTrue;
+            var baslik = context.Headings.Max(x => x.Category.CategoryName);
+            ViewBag.baslik = baslik;
+
+            var trueolanlar = context.Categories.Count(x => x.CategoryStatus == true);
+            var falseolanlar = context.Categories.Count(x => x.CategoryStatus == false);
+            ViewBag.status = (trueolanlar - falseolanlar);
 
             return View();
         }

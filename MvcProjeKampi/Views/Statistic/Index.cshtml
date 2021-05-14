@@ -3,62 +3,72 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<br />
-<h2>İstatistikler</h2>
 
-<html>
-<head>
+<h2>İstatistik Sayfası - Serdal KESKİN</h2>
+<table>
 
-</head>
-<br />
-<body>
+    <tr>
+        <td>
+            <div class="card text-white  bg-gradient-dark" style="max-width:20rem;">
+                <div class="card-header">İstatistikler 1</div>
+                <div class="card-body">
+                    <h1 class="card-title">Toplam Kategori Sayısı</h1>
+                    <br />
+                    <br />
+                    <h5 class="card-text">@ViewBag.kategorigetir</h5>
+                </div>
+            </div>
+        </td>
 
-    <div class="row">
-        <div class="col-md-3">
-            <div class="small-box bg-success">
-                <div class="inner" style="text-align: center">
+        <td>
+            <div class="card text-white  badge-warning" style="max-width:20rem;">
+                <div class="card-header">İstatistikler 2</div>
+                <div class="card-body">
+                    <h1 class="card-title">Yazılım Konu Sayısı</h1>
                     <br />
-                    <h3><sup style="font-size: 50px">@ViewBag.totalNumberOfCategories</sup></h3>
-                    <sup style="font-size: 20px">Toplam Kategori Sayısı</sup>
-                </div>  <a href="#" class="small-box-footer"></a>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="small-box bg-red">
-                <div class="inner" style="text-align: center">
                     <br />
-                    <h3><sup style="font-size: 50px">@ViewBag.softwareCategoryTitleNumber</sup></h3>
-                    <sup style="font-size: 20px">Yazılım Kategorisi Başlık Sayısı</sup>
-                </div><a href="#" class="small-box-footer"></a>
+                    <h5 class="card-text">@ViewBag.yazilim</h5>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="small-box bg-purple">
-                <div class="inner" style="text-align: center">
+        </td>
+
+        <td>
+            <div class="card text-white  bg-danger" style="max-width:20rem;">
+                <div class="card-header">İstatistikler 3</div>
+                <div class="card-body">
+                    <h1 class="card-title">durumu true ile false olan kategoriler arasındaki sayısal fark</h1>
                     <br />
-                    <h3><sup style="font-size: 50px">@ViewBag.writerNameSortByA</sup></h3>
-                    <sup style="font-size: 20px">Yazar adında a harfi geçen yazar sayısı</sup>
-                </div><a href="#" class="small-box-footer"></a>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="small-box bg-blue">
-                <div class="inner" style="text-align: center">
                     <br />
-                    <h3><sup style="font-size: 40px">@ViewBag.categoryNameWithTheMostTitles</sup></h3>
-                    <sup style="font-size: 20px">En fazla başlığa sahip kategori adı</sup>
-                </div> <a href="#" class="small-box-footer"></a>
+                    <h5 class="card-text">@ViewBag.status</h5>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="small-box bg-orange">
-                <div class="inner" style="text-align: center">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <div class="card text-white  bg-primary" style="max-width:20rem;">
+                <div class="card-header">İstatistikler 4</div>
+                <div class="card-body">
+                    <h1 class="card-title">Adında A harfi geçen yazar sayısı</h1>
                     <br />
-                    <h3><sup style="font-size: 50px">@ViewBag.activeCategories</sup></h3>
-                    <sup style="font-size: 20px">Kategori tablosunda durumu true olanlar</sup>
-                </div><a href="#" class="small-box-footer"></a>
+                    <br />
+                    <h5 class="card-text">@ViewBag.yazar</h5>
+                </div>
             </div>
-        </div>
-    </div>
-</body>
-</html>
+        </td>
+
+        <td>
+            <div class="card text-white  bg-gradient-maroon" style="max-width:20rem;">
+                <div class="card-header">İstatistikler 5</div>
+                <div class="card-body">
+                    <h1 class="card-title">En fazla başlığa sahip kategori adı</h1>
+                    <br />
+                    <br />
+                    <h5 class="card-text">@ViewBag.baslik</h5>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+
